@@ -1,16 +1,16 @@
-import { formatCurrency } from "@/helpers/format-currency";
 import { Product } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { format } from "path";
+
+import { formatCurrency } from "@/helpers/format-currency";
 
 interface ProductsProps {
   products: Product[];
 }
 
 const Products = ({ products }: ProductsProps) => {
-  const {slug} = useParams<{slug: string}>();
+  const { slug } = useParams<{ slug: string }>();
   return (
     <div className="space-y-3 px-5">
       {products.map((product) => (

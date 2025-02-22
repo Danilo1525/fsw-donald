@@ -1,12 +1,12 @@
 "use client";
 
 import { Prisma } from "@prisma/client";
+import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { ChefHatIcon, ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import Image from "next/image";
 import { useContext, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { formatCurrency } from "@/helpers/format-currency";
 
 import CartSheet from "../../components/cart-sheet";
@@ -118,8 +118,8 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
         <Button className="w-full rounded-full" onClick={handleAddToCart}>
           Adicionar à sacola
         </Button>
+        <CartSheet />
       </div>
-      <CartSheet />
     </>
   );
 };
