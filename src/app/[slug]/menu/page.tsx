@@ -36,7 +36,7 @@ const RestaurantMenuPage = async ({
   }
   return (
     <div>
-      <RestaurantHeader restaurant={restaurant}></RestaurantHeader>
+      <RestaurantHeader restaurant={restaurant} />
       <RestaurantCategories restaurant={restaurant} />
     </div>
   );
